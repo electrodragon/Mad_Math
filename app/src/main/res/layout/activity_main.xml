@@ -52,4 +52,15 @@
         app:layout_constraintStart_toStartOf="@+id/playBtn"
         app:layout_constraintTop_toBottomOf="@+id/playBtn"
         app:layout_constraintVertical_bias="0.18" />
+
+    <ImageView
+        android:id="@+id/loading_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/highscoreBtn"
+        app:layout_constraintEnd_toEndOf="@+id/highscoreBtn"
+        app:layout_constraintStart_toStartOf="@+id/highscoreBtn"
+        app:layout_constraintTop_toBottomOf="@+id/exitBtn"
+        app:srcCompat="@drawable/loading" />
 </androidx.constraintlayout.widget.ConstraintLayout>
