@@ -13,12 +13,4 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void playBtnClicked(View view) {
-    }
-
-    public void highScoreBtnClicked(View view) {
-    }
-
-    public void exitBtnClicked(View view) {
-    }
 }
