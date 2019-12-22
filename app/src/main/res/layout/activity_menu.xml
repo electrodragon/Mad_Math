@@ -4,6 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_menu"
     tools:context=".MenuActivity">
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/FrameConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/menu_frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/plus_btn"
+            android:layout_width="31dp"
+            android:layout_height="66dp"
+            android:background="@drawable/plus_btn_active"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.84"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.18" />
+
+        <Button
+            android:id="@+id/minus_btn"
+            android:layout_width="31dp"
+            android:layout_height="66dp"
+            android:background="@drawable/minus_btn"
+            app:layout_constraintEnd_toEndOf="@+id/plus_btn"
+            app:layout_constraintStart_toStartOf="@+id/plus_btn"
+            app:layout_constraintTop_toBottomOf="@+id/plus_btn" />
+
+        <Button
+            android:id="@+id/mult_btn"
+            android:layout_width="31dp"
+            android:layout_height="66dp"
+            android:background="@drawable/mult_btn"
+            app:layout_constraintEnd_toEndOf="@+id/minus_btn"
+            app:layout_constraintStart_toStartOf="@+id/minus_btn"
+            app:layout_constraintTop_toBottomOf="@+id/minus_btn" />
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="108dp"
+            android:layout_height="32dp"
+            android:background="@drawable/start_game"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mult_btn"
+            app:layout_constraintHorizontal_bias="0.924"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/plus_btn"
+            app:layout_constraintVertical_bias="0.7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
