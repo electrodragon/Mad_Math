@@ -4,15 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/bg_main"
+    tools:context=".MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/main_logo"
+        android:layout_width="125dp"
+        android:layout_height="117dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16000003"
+        app:srcCompat="@drawable/logo_main" />
+
+    <Button
+        android:id="@+id/playBtn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/play_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/main_logo"
+        app:layout_constraintStart_toStartOf="@+id/main_logo"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/highscoreBtn"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/high_score_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/exit_btn"
+        app:layout_constraintBottom_toTopOf="@+id/highscoreBtn"
+        app:layout_constraintEnd_toEndOf="@+id/playBtn"
+        app:layout_constraintStart_toStartOf="@+id/playBtn"
+        app:layout_constraintTop_toBottomOf="@+id/playBtn"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <ImageView
+        android:id="@+id/loading_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/highscoreBtn"
+        app:layout_constraintEnd_toEndOf="@+id/highscoreBtn"
+        app:layout_constraintStart_toStartOf="@+id/highscoreBtn"
+        app:layout_constraintTop_toBottomOf="@+id/exitBtn"
+        app:srcCompat="@drawable/loading" />
 </androidx.constraintlayout.widget.ConstraintLayout>
