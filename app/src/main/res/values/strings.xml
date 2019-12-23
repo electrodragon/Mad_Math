@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Mad Math</string>
+    <string name="currentScoreString">Score: </string>
+    <string name="currentLevelString">Level: </string>
+    <string name="testValue">9</string>
+    <string name="testOperator">x</string>
+    <string name="testValue2">786</string>
+    <string name="staticEqualSign">=</string>
 </resources>

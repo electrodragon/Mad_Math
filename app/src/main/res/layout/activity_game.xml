@@ -4,6 +4,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_game"
     tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/currentScoreString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lobster"
+        android:text="@string/currentScoreString"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/currentScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/currentScoreString"
+        app:layout_constraintStart_toEndOf="@+id/currentScoreString"
+        app:layout_constraintTop_toTopOf="@+id/currentScoreString" />
+
+    <TextView
+        android:id="@+id/currentLevelString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/lobster"
+        android:text="@string/currentLevelString"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/currentLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/currentLevelString"
+        app:layout_constraintStart_toEndOf="@+id/currentLevelString"
+        app:layout_constraintTop_toTopOf="@+id/currentLevelString" />
+
+    <TextView
+        android:id="@+id/questionValue1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/permanent_marker"
+        android:text="@string/testValue"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/currentLevelString"
+        app:layout_constraintStart_toStartOf="@+id/currentScoreString"
+        app:layout_constraintTop_toBottomOf="@+id/currentScoreString"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <TextView
+        android:id="@+id/questionValue2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="@string/testValue"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/questionValue1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/questionValue1" />
+
+    <TextView
+        android:id="@+id/questionOperator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mashanzheng_regular"
+        android:text="@string/testOperator"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/questionValue2"
+        app:layout_constraintEnd_toStartOf="@+id/questionValue2"
+        app:layout_constraintStart_toEndOf="@+id/questionValue1"
+        app:layout_constraintTop_toTopOf="@+id/questionValue1" />
+
+    <TextView
+        android:id="@+id/staticEqualSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/permanent_marker"
+        android:text="@string/staticEqualSign"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/answerChoice2"
+        app:layout_constraintEnd_toEndOf="@+id/questionOperator"
+        app:layout_constraintStart_toStartOf="@+id/questionOperator"
+        app:layout_constraintTop_toBottomOf="@+id/questionOperator" />
+
+    <Button
+        android:id="@+id/answerChoice1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/tomato"
+        android:fontFamily="@font/ravi_prakash"
+        android:paddingTop="5dp"
+        android:text="@string/testValue2"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/currentLevelString"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionValue1" />
+
+    <Button
+        android:id="@+id/answerChoice3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@color/tomato"
+        android:fontFamily="@font/ravi_prakash"
+        android:paddingTop="5dp"
+        android:text="@string/testValue2"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/answerChoice1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerChoice1" />
+
+    <Button
+        android:id="@+id/answerChoice2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/tomato"
+        android:fontFamily="@font/ravi_prakash"
+        android:paddingTop="5dp"
+        android:text="@string/testValue2"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/answerChoice3"
+        app:layout_constraintEnd_toStartOf="@+id/answerChoice3"
+        app:layout_constraintStart_toEndOf="@+id/answerChoice1"
+        app:layout_constraintTop_toTopOf="@+id/answerChoice1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
